@@ -1,5 +1,7 @@
 # Hand-gesture-recognition
 
+## Introduction
+
 This project aims to recognize hand signs and finger gestures using computer vision and machine learning techniques. It utilizes MediaPipe for hand tracking, OpenCV for image processing, and TensorFlow for model inference and training.
 <br> This is a sample
 program that recognizes hand signs and finger gestures with a simple MLP using the detected key points.
@@ -10,9 +12,9 @@ This repository contains the following contents.
 
 * Sample program
 * Hand sign recognition model(TFLite)
-* Finger gesture recognition model(TFLite)
 * Learning data for hand sign recognition and notebook for learning
-* Learning data for finger gesture recognition and notebook for learning
+<!-- * Finger gesture recognition model(TFLite) -->
+<!-- * Learning data for finger gesture recognition and notebook for learning -->
 
 ## Requirements
 
@@ -41,6 +43,15 @@ Detection confidence threshold (Default：0.5)
 * --min_tracking_confidence<br>
 Tracking confidence threshold (Default：0.5)
 
+Currently it can identify and tell few gestures such as 
+
+* Open (HI)
+* Close
+* Pointer (move)
+* perfect ( all ok)
+* Peace Sign (Victory)
+* Thumbs Up(all good)
+
 ## Directory
 
 <pre>
@@ -50,21 +61,20 @@ Tracking confidence threshold (Default：0.5)
 │  
 ├─model
 │  ├─keypoint_classifier
-│  │  │  keypoint.csv
-│  │  │  keypoint_classifier.hdf5
-│  │  │  keypoint_classifier.py
-│  │  │  keypoint_classifier.tflite
-│  │  └─ keypoint_classifier_label.csv
-│  │          
-│  └─point_history_classifier
+│     │  keypoint.csv
+│     │  keypoint_classifier.hdf5
+│     │  keypoint_classifier.py
+│     │  keypoint_classifier.tflite
+│     └─ keypoint_classifier_label.csv
+|
+└─utils
+    └─cvfpscalc.py
+<!-- │  └─point_history_classifier
 │      │  point_history.csv
 │      │  point_history_classifier.hdf5
 │      │  point_history_classifier.py
 │      │  point_history_classifier.tflite
-│      └─ point_history_classifier_label.csv
-│          
-└─utils
-    └─cvfpscalc.py
+│      └─ point_history_classifier_label.csv -->
 </pre>
 ### app.py
 
@@ -76,9 +86,9 @@ You can also collect training data (index finger coordinate history) for finger 
 
 This is a model training script for hand sign recognition.
 
-### point_history_classification.ipynb
+<!-- ### point_history_classification.ipynb
 
-This is a model training script for finger gesture recognition.
+This is a model training script for finger gesture recognition. -->
 
 ### model/keypoint_classifier
 
@@ -90,7 +100,7 @@ The following files are stored.
 * Label data(keypoint_classifier_label.csv)
 * Inference module(keypoint_classifier.py)
 
-### model/point_history_classifier
+<!-- ### model/point_history_classifier
 
 This directory stores files related to finger gesture recognition.<br>
 The following files are stored.
@@ -98,7 +108,7 @@ The following files are stored.
 * Training data(point_history.csv)
 * Trained model(point_history_classifier.tflite)
 * Label data(point_history_classifier_label.csv)
-* Inference module(point_history_classifier.py)
+* Inference module(point_history_classifier.py) -->
 
 ### utils/cvfpscalc.py
 
@@ -134,7 +144,7 @@ To change the number of training data classes, change the value of "NUM_CLASSES 
 The image of the model prepared in "[keypoint_classification.ipynb](keypoint_classification.ipynb)" is as follows.
 <img src="https://user-images.githubusercontent.com/37477845/102246723-69c76a00-3f42-11eb-8a4b-7c6b032b7e71.png" width="50%"><br><br>
 
-### Finger gesture recognition training
+<!-- ### Finger gesture recognition training
 
 #### 1.Learning data collection
 
@@ -161,7 +171,7 @@ To change the number of training data classes, change the value of "NUM_CLASSES 
 The image of the model prepared in "[point_history_classification.ipynb](point_history_classification.ipynb)" is as follows.
 <img src="https://user-images.githubusercontent.com/37477845/102246771-7481ff00-3f42-11eb-8ddf-9e3cc30c5816.png" width="50%"><br>
 The model using "LSTM" is as follows. <br>Please change "use_lstm = False" to "True" when using (tf-nightly required (as of 2020/12/16))<br>
-<img src="https://user-images.githubusercontent.com/37477845/102246817-8368b180-3f42-11eb-9851-23a7b12467aa.png" width="60%">
+<img src="https://user-images.githubusercontent.com/37477845/102246817-8368b180-3f42-11eb-9851-23a7b12467aa.png" width="60%"> -->
 
 ## Reference
 
@@ -169,7 +179,7 @@ The model using "LSTM" is as follows. <br>Please change "use_lstm = False" to "T
 
 ## Author
 
-* Arijit Kar
+* Arijit Kar 
 * Jagjeet Singh
 * Rahul Sharma
 * Shiva Tripathi
