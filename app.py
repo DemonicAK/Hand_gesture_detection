@@ -121,6 +121,8 @@ def main():
         results = hands.process(image)
         image.flags.writeable = True
 
+        final_call = 0
+
         #  ####################################################################
         if results.multi_hand_landmarks is not None:
             for hand_landmarks, handedness in zip(results.multi_hand_landmarks,
@@ -168,6 +170,7 @@ def main():
                     keypoint_classifier_labels[hand_sign_id],
                     point_history_classifier_labels[most_common_fg_id[0][0]],
                 )
+                final_call = point_history_classifier_labels[most_common_fg_id[0][0]]
         else:
             point_history.append([0, 0])
 
@@ -175,7 +178,11 @@ def main():
         debug_image = draw_info(debug_image, fps, mode, number)
 
         # Screen reflection #############################################################
-        cv.imshow('Hand Gesture Recognition', debug_image)
+        # cv.imshow('Hand Gesture Recognition', debug_image)
+        # print(final_call)
+        if final_call == "Stop":
+            cv.imshow('Hand Gesture Recognition', debug_image)
+            print(final_call)
 
     cap.release()
     cv.destroyAllWindows()
