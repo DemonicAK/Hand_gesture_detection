@@ -1,6 +1,7 @@
 # Hand-gesture-recognition
 
-Estimate hand pose using MediaPipe (Python version).<br> This is a sample
+This project aims to recognize hand signs and finger gestures using computer vision and machine learning techniques. It utilizes MediaPipe for hand tracking, OpenCV for image processing, and TensorFlow for model inference and training.
+<br> This is a sample
 program that recognizes hand signs and finger gestures with a simple MLP using the detected key points.
 
 <!-- ![mqlrf-s6x16](https://user-images.githubusercontent.com/37477845/102222442-c452cd00-3f26-11eb-93ec-c387c98231be.gif) -->
@@ -168,7 +169,7 @@ The model using "LSTM" is as follows. <br>Please change "use_lstm = False" to "T
 
 ## Author
 
-* Arijit Kare
+* Arijit Kar
 * Jagjeet Singh
 * Rahul Sharma
 * Shiva Tripathi
