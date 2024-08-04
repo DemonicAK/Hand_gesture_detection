@@ -179,7 +179,7 @@ The model using "LSTM" is as follows. <br>Please change "use_lstm = False" to "T
 
 ## Author
 
-* Arijit Kar 
+* Arijit Kar
 * Jagjeet Singh
 * Shiva Tripathi
 * Mahak Sahu
