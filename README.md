@@ -6,30 +6,98 @@ This project aims to recognize hand signs and finger gestures using computer vis
 <br> This is a sample
 program that recognizes hand signs and finger gestures with a simple MLP using the detected key points.
 
-<!-- ![mqlrf-s6x16](https://user-images.githubusercontent.com/37477845/102222442-c452cd00-3f26-11eb-93ec-c387c98231be.gif) -->
+
 
 This repository contains the following contents.
 
 * Sample program
 * Hand sign recognition model(TFLite)
-* Learning data for hand sign recognition and notebook for learning
-<!-- * Finger gesture recognition model(TFLite) -->
-<!-- * Learning data for finger gesture recognition and notebook for learning -->
+* Learning Data and Code  for hand sign recognition and notebook for learning
+
+## PreRequisite
+
+* Windows 10 or later / Ubuntu 24.04 (LTS)
+* Python 3.11
 
 ## Requirements
 
-* mediapipe 0.8.1
+* mediapipe 0.10.14 or Later
 * OpenCV 3.4.2 or Later
-* Tensorflow 2.3.0 or Later <br> tf-nightly 2.5.0.dev or later (Only when creating a TFLite for an LSTM model)
-* scikit-learn 0.23.2 or Later (Only if you want to display the confusion matrix)
-* matplotlib 3.3.2 or Later (Only if you want to display the confusion matrix)
+* Tensorflow 2.17.0
+* Jupyter (To train the model)
+* scikit-learn 0.23.2 or Later (Only if you want to display the confusion matrix Training)
+* matplotlib 3.3.2 or Later (Only if you want to display the confusion matrix during Training)
+
+## Setup
+
+```bash
+git clone https://github.com/DemonicAK/Hand_gesture_detection.git
+
+cd Hand_gesture_detection
+```
+
+### For Windows
+
+Run These Commands in PowerShell
+
+```powershell
+python3 -m venv env
+
+env\Scripts\Activate.ps1
+
+pip3 install -r requirements.txt
+
+```
+
+### For Ubuntu
+
+Run These Commands in bash Terminal
+
+```bash
+python3 -m venv env
+
+source env/bin/activate
+
+pip3 install -r requirements.txt
+
+```
+
+### ***After Installing the required Packages We are ready to run the program***
 
 ## Demo
 
+
+**Firstly Turn On the Environment in which you want to run the program**
+
+### Ubuntu
+
+```bash
+cd Hand_gesture_detection
+
+source env/bin/activate
+
+```
+
+### Windows
+
+```bash
+cd Hand_gesture_detection
+
+env\Scripts\Activate.ps1
+
+```
+
 Here's how to run the demo using your webcam.
+
 
 ```bash
 python app.py
+```
+
+or
+
+```bash
+python3 app.py
 ```
 
 The following options can be specified when running the demo.
